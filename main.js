@@ -80,7 +80,7 @@ function initWebClient() {
     boardDisplay.drawFromBoardData(boardMain.tiles);
     gameCurrData.started = false;
     gameCurrData.board = boardMain.tiles;
-    history.pushState(null, '', '/');
+    history.pushState(null, '', window.location.pathname);
 }
 
 function startListenClient() {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show PNG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--board-->
+  <div class="board-main-container">
+    <img src="asset/board_main.png" alt="My Board" class="board-main-back" id="board-main-back">
+    <canvas id="board-main-canva-static" class="board-main-canva-static" width="134" height="115"></canvas>
+    <canvas id="board-main-canva-fall-animation" class="board-main-canva-fall-animation" width="48" height="423"></canvas>
+    <div id="board-main-canva-coin_fall-container"></div>
+    <canvas id="board-main-canva-mouse-follow" class="board-main-canva-mouse-follow" width="423" height="48"></canvas>
+    <canvas id="board-main-canva-won" class="board-main-canva-won" width="134" height="115"></canvas>
+    <div id="board-mouse-overlay"></div>
+  </div>
+
+  <!--info-->
+  <div class="info-main-container" hidden>
+    <img src="asset/info_board.png" alt="My Board" class="info-main-board" id="info-main-board">
+    <!--button class="info-main-button" id="info-main-button" style="height: auto; border-image: url('asset/info_board_hole.png') 4 fill stretch; color: #E0E0E0; text-shadow: 1px 1px 0 #1c1315; transform: translate(calc(-50% + 0px), calc(-50% + -10px));">
+      <span class="info-main-button-text" id="id-info-main-title">PLACEHOLDER</span>
+    </button -->
+    <div id="id-info-board-title-container"></div>
+    <div class="info-main-text-container">
+      <div class="info-main-title"></div>      
+    </div>
+    <div class="info-button-container" id="id-info-button-container"></div>
+  </div>
+
+  <!--turn info-->
+  <div class="turn-center-wrapper">
+    <div class="turn-main-container" id="id-turn-main-container" hidden>
+      <!--div id="turn-info-coin"><img src="asset/turn-ICON.png"><img src="asset/coin_yellow.png" style="transform: translate(-20px,-4px);"></div-->
+      <img src="asset/coin_red.png" id="turn-info-coin">
+      <img src="asset/turn-YOUR_TURN.png" id="turn-info-text">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script src="graphics.js"></script>
+  <script src="board.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
